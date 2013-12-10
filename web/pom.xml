@@ -18,12 +18,6 @@
 		<dependency>
 			<groupId>com.cxfly.notify</groupId>
 			<artifactId>notify.subscriber</artifactId>
-			<exclusions>
-				<exclusion>
-					<artifactId>spring</artifactId>
-					<groupId>org.springframework</groupId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>com.cxfly.notify</groupId>
