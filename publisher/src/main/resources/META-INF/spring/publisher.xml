@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+	<bean id="notifyManager" class="com.taobao.notify.remotingclient.NotifyManagerBean"
+		init-method="init">
+		<property name="publishTopics"> <!-- 配置所需发布的topics -->
+			<list>
+				<value>TMALL_LP_WL_MAIN</value>
+			</list>
+		</property>
+		<property name="groupId" value="LP_WL_LZ_PUBLISH_GROUPID" /> <!-- 发送方的GroupId -->
+		<property name="name" value="notifyManager" /> <!-- 应用名 -->
+		<property name="description" value="notifyManager" /> <!-- 描述 -->
+	</bean>
+
+
+</beans>
